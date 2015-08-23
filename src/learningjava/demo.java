@@ -11,16 +11,16 @@ public class demo {
 		System.out.println(c);
 	}
   
-	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter the value of A");
-		int a = input.nextInt();
-		System.out.println("Enter the value of B");
-		int b = input.nextInt();
-		demo af =new demo();
-		af.Add(a,b);
-	
-	}
+//	public static void main(String[] args) {
+//		Scanner input = new Scanner(System.in);
+//		System.out.println("Enter the value of A");
+//		int a = input.nextInt();
+//		System.out.println("Enter the value of B");
+//		int b = input.nextInt();
+//		demo af =new demo();
+//		af.Add(a,b);
+//	
+//	}
 	  }
 	
 
