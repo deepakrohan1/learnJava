@@ -20,6 +20,8 @@ public class App {
 		hello.students.add("Shiva G");
 		hello.students.set(1, "Deepu");//Set in ArrayList
 		hello.students.add(0,"Ganesh");
+		hello.students.add("Deepak Rohan");
+		hello.students.add("Deepak Rohan");
 		
 		
 		hello.listDisplay();
@@ -38,6 +40,9 @@ public class App {
 		hello.posDisplay();
 		System.out.println("Sorted");
 		Collections.sort(hello.students); //Sorts the list 
+		hello.students.remove("Deepak Rohan");
+		System.out.println(hello.students);
+		hello.students.removeAll(Collections.singleton("Deepak Rohan"));//Remove all the instances from the collection
 		System.out.println(hello.students);
 	}
 
