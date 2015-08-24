@@ -1,5 +1,6 @@
 package learningjava;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
@@ -8,9 +9,8 @@ public class App {
 	public App() {
 		// TODO Auto-generated constructor stub
 	}
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
+	public void arrayListOps(){
 		HelloArrayList hello = new HelloArrayList(); //Creating an object of the other class
 		hello.addContent(); // Accessing the methods of the other class
 		hello.names.add("Shiva G"); //Accessing the variables of the class intantiated
@@ -44,6 +44,34 @@ public class App {
 		System.out.println(hello.students);
 		hello.students.removeAll(Collections.singleton("Deepak Rohan"));//Remove all the instances from the collection
 		System.out.println(hello.students);
+		System.out.println("End of Array List Operations");
+		
+	}
+	
+	public ArrayList<String> testing(){
+		HelloArrayList hello = new HelloArrayList(); //Creating an object of the other class
+		hello.students.add("Deepak Rohan");
+		hello.students.add("Deepak Rohan");
+		hello.students.add("Sekar Rohan");
+		hello.students.add("Shiva G");
+		hello.students.set(1, "Deepu");//Set in ArrayList
+		hello.students.add(0,"Ganesh");
+		hello.students.add("Deepak Rohan");
+		hello.students.add("Deepak Rohan");
+		return hello.students;
+	}
+	
+	public void disHashset(){
+		Hashset hash = new Hashset();
+		hash.setCommands();
+		hash.dispHashList();
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		App app = new App();
+		app.arrayListOps();
+		app.disHashset();
 	}
 
 }
