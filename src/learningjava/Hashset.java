@@ -5,7 +5,6 @@ import java.util.Collection;
 import java.util.HashSet;
 
 public class Hashset {
-	HelloArrayList arrayList = null;
 	Collection<String> nodups = null;
 	ArrayList<String> test = null;
 
@@ -15,19 +14,24 @@ public class Hashset {
 	}
 
 	public void setCommands() {
-		
+
 		App app = new App();
 		app.arrayListOps();
-//		app.testing();
-		 test = app.testing();
+		test = app.testing();
 		System.out.println(test);
 		nodups = new HashSet<String>(test);
+	}
+	/**
+	 * Read the input string and remove the repitation 
+	 */
+	public void readInputs(){
+		
 	}
 
 	public void dispHashList() {
 		System.out.println("Display Array List");
-		System.out.println(test);
-		System.out.println(nodups+" :size of "+nodups.size());
+		System.out.println(test + " " + test.size());
+		System.out.println(nodups + " :size of " + nodups.size());
 	}
 
 }

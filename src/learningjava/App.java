@@ -2,35 +2,39 @@ package learningjava;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.Random;
+import learningjava.HelloArrayList;
 
 public class App {
+	HashSet<String> input = new HashSet<String>();
 
 	public App() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	public void arrayListOps(){
-		HelloArrayList hello = new HelloArrayList(); //Creating an object of the other class
+
+	public void arrayListOps() {
+		HelloArrayList hello = new HelloArrayList(); // Creating an object of
+														// the other class
 		hello.addContent(); // Accessing the methods of the other class
-		hello.names.add("Shiva G"); //Accessing the variables of the class intantiated
+		hello.names.add("Shiva G"); // Accessing the variables of the class
+									// intantiated
 		hello.students.add("Deepak Rohan");
 		hello.students.add("Deepak Rohan");
 		hello.students.add("Sekar Rohan");
 		hello.students.add("Shiva G");
-		hello.students.set(1, "Deepu");//Set in ArrayList
-		hello.students.add(0,"Ganesh");
+		hello.students.set(1, "Deepu");// Set in ArrayList
+		hello.students.add(0, "Ganesh");
 		hello.students.add("Deepak Rohan");
 		hello.students.add("Deepak Rohan");
-		
-		
+
 		hello.listDisplay();
 		System.out.println("-------");
-		System.out.println(hello.students.get(1));//Gets the name at the Index
+		System.out.println(hello.students.get(1));// Gets the name at the Index
 		System.out.println(hello.names.equals(hello.students));
 		System.out.println("++++++++");
-		
-		Collections.shuffle(hello.students,new Random());
+
+		Collections.shuffle(hello.students, new Random());
 		System.out.println(hello.students);
 		System.out.println("************");
 		hello.iterDisplay();
@@ -39,32 +43,47 @@ public class App {
 		System.out.println("#############");
 		hello.posDisplay();
 		System.out.println("Sorted");
-		Collections.sort(hello.students); //Sorts the list 
+		Collections.sort(hello.students); // Sorts the list
 		hello.students.remove("Deepak Rohan");
 		System.out.println(hello.students);
-		hello.students.removeAll(Collections.singleton("Deepak Rohan"));//Remove all the instances from the collection
+		hello.students.removeAll(Collections.singleton("Deepak Rohan"));// Remove
+																		// all
+																		// the
+																		// instances
+																		// from
+																		// the
+																		// collection
 		System.out.println(hello.students);
 		System.out.println("End of Array List Operations");
-		
+
 	}
-	
-	public ArrayList<String> testing(){
-		HelloArrayList hello = new HelloArrayList(); //Creating an object of the other class
+
+	public ArrayList<String> testing() {
+		HelloArrayList hello = new HelloArrayList(); // Creating an object of
+														// the other class
 		hello.students.add("Deepak Rohan");
 		hello.students.add("Deepak Rohan");
 		hello.students.add("Sekar Rohan");
 		hello.students.add("Shiva G");
-		hello.students.set(1, "Deepu");//Set in ArrayList
-		hello.students.add(0,"Ganesh");
+		hello.students.set(1, "Deepu");// Set in ArrayList
+		hello.students.add(0, "Ganesh");
 		hello.students.add("Deepak Rohan");
 		hello.students.add("Deepak Rohan");
 		return hello.students;
 	}
-	
-	public void disHashset(){
+
+	public void disHashset() {
 		Hashset hash = new Hashset();
 		hash.setCommands();
 		hash.dispHashList();
+	}
+
+	public void passingArguments(String arg1) {
+		input.add(arg1);
+		System.out.println(input);
+		System.out.println("Unique Words");
+		System.out.println(input.size());
+
 	}
 
 	public static void main(String[] args) {
@@ -72,6 +91,13 @@ public class App {
 		App app = new App();
 		app.arrayListOps();
 		app.disHashset();
-	}
+		/**
+		 * Passing the Argument to a different method counting them over there.
+		 */
 
+		for (String a : args) {
+			// input.add(a);
+			app.passingArguments(a);
+		}
+	}
 }
