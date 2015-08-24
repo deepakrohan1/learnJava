@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Random;
+import java.util.TreeSet;
+
 import learningjava.HelloArrayList;
 
 public class App {
 	HashSet<String> input = new HashSet<String>();
+	TreeSet<String> tree = new TreeSet<String>();
 
 	public App() {
 		// TODO Auto-generated constructor stub
@@ -77,13 +80,25 @@ public class App {
 		hash.setCommands();
 		hash.dispHashList();
 	}
-
+	/**
+	 * Just in a random order
+	 * Using HashSet
+	 * @param arg1
+	 */
 	public void passingArguments(String arg1) {
 		input.add(arg1);
 		System.out.println(input);
 		System.out.println("Unique Words");
 		System.out.println(input.size());
 
+	}
+	/** Alphabetical sorted order
+	 * Design using a TreeSet
+	 * @param arg1
+	 */
+	public void designTreeSet(String arg1){
+		tree.add(arg1);
+		System.out.println(tree);
 	}
 
 	public static void main(String[] args) {
@@ -98,6 +113,7 @@ public class App {
 		for (String a : args) {
 			// input.add(a);
 			app.passingArguments(a);
+			app.designTreeSet(a);
 		}
 	}
 }
