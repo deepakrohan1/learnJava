@@ -25,6 +25,9 @@ public class BicycleApp {
 		System.out.println(mbike.toString());
 		//Upcasting
 		Bicycle bicycle2 = mbike; //bicycle2 has all methods of Bicycle class nt of Mountain Bike
+		//Circle
+		Circle circle = new Circle();
+		circle.draw();
 		
 	}
 
