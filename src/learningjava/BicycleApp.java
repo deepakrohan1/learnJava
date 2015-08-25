@@ -19,6 +19,12 @@ public class BicycleApp {
 		//2.Create a point directly in the method
 		double y = Point.calculateDistance(new Point(1,0));
 		System.out.println(y);
+		//Mountain Bike
+		MountainBike mbike = new MountainBike(100, 3, 10);
+		mbike.speedUp();
+		System.out.println(mbike.toString());
+		//Upcasting
+		Bicycle bicycle2 = mbike; //bicycle2 has all methods of Bicycle class nt of Mountain Bike
 		
 	}
 
