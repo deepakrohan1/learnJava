@@ -35,4 +35,17 @@ int speed = 0, gear = 1;
 		return "Bicycle [speed=" + speed + ", gear=" + gear + "]";
 	}
 
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+
+		Bicycle bicycle = (Bicycle) o;
+
+		if (speed != bicycle.speed) return false;
+		return gear == bicycle.gear;
+
+	}
+
+
 }
